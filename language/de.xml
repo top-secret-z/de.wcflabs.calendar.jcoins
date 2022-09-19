@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/language.xsd" languagecode="de" languagename="Deutsch" countrycode="de">
+	<category name="wcf.acp.group">
+		<item name="wcf.acp.group.option.user.jcoins.calendar.canAddFee"><![CDATA[Kann Gebühren für Termine nutzen]]></item>
+	</category>
+	
+	<category name="wcf.jcoins.calendar">
+		<item name="wcf.jcoins.calendar.fee"><![CDATA[Gebühr]]></item>
+		<item name="wcf.jcoins.calendar.fee.amount"><![CDATA[{#$event->jCoinsFee} {JCOINS_NAME}]]></item>
+		<item name="wcf.jcoins.calendar.fee.jcoins"><![CDATA[Gebühr in {JCOINS_NAME}]]></item>
+		<item name="wcf.jcoins.calendar.fee.jcoins.description"><![CDATA[Betrag in {JCOINS_NAME}, der vom Teilnehmer bei Zusage eingezogen wird.]]></item>
+		<item name="wcf.jcoins.calendar.fee.form"><![CDATA[Gebühr]]></item>
+		<item name="wcf.jcoins.calendar.fee.form.amount"><![CDATA[Die Teilnahmegebühr beträgt <strong>{#$event->jCoinsFee} {JCOINS_NAME}</strong>. Bei späterer Absage werden <strong>{#$event->jCoinsReFee} {JCOINS_NAME}</strong> erstattet.]]></item>
+		<item name="wcf.jcoins.calendar.reFee"><![CDATA[Erstattung]]></item>
+		<item name="wcf.jcoins.calendar.reFee.amount"><![CDATA[{#$event->jCoinsReFee} {JCOINS_NAME}]]></item>
+		<item name="wcf.jcoins.calendar.reFee.jcoins"><![CDATA[Erstattung in {JCOINS_NAME}]]></item>
+		<item name="wcf.jcoins.calendar.reFee.jcoins.description"><![CDATA[Betrag in {JCOINS_NAME}, der einem Teilnehmer bei späterer Absage gutgeschrieben wird.]]></item>
+	</category>
+	
+	<category name="wcf.jcoins.statement">
+		<item name="wcf.jcoins.statement.title.de.wcflabs.jcoins.statement.calendar.event"><![CDATA[Termin]]></item>
+		<item name="wcf.jcoins.statement.title.retractable.de.wcflabs.jcoins.statement.calendar.event"><![CDATA[Termin gelöscht]]></item>
+		<item name="wcf.jcoins.statement.reason.de.wcflabs.jcoins.statement.calendar.event"><![CDATA[{if $statement->getObject()->getTitle()}{if LANGUAGE_USE_INFORMAL_VARIANT}Dein{else}Ihr{/if} Termin „{$statement->getObject()->getTitle()}“ wurde veröffentlicht.{else}Ein Termin von {if LANGUAGE_USE_INFORMAL_VARIANT}dir{else}Ihnen{/if} wurde veröffentlicht, der mittlerweile gelöscht ist.{/if}]]></item>
+		<item name="wcf.jcoins.statement.reason.reverse.de.wcflabs.jcoins.statement.calendar.event"><![CDATA[{if $statement->getObject()->getTitle()}{if LANGUAGE_USE_INFORMAL_VARIANT}Dein{else}Ihr{/if} Termin „{$statement->getObject()->getTitle()}“ wurde gelöscht oder deaktiviert.{else}Ein Termin von {if LANGUAGE_USE_INFORMAL_VARIANT}dir{else}Ihnen{/if} wurde gelöscht.{/if}]]></item>
+		<item name="wcf.jcoins.statement.category.de.wcflabs.jcoins.calendar"><![CDATA[WoltLab Kalender]]></item>
+		<item name="wcf.jcoins.statement.title.de.wcflabs.jcoins.statement.calendar.fee"><![CDATA[Gebühr bezahlt]]></item>
+		<item name="wcf.jcoins.statement.reason.de.wcflabs.jcoins.statement.calendar.fee"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Du hast{else}Sie haben{/if} die Gebühr für die Teilnahme {if $statement->getObject()->getTitle()}am Termin „{$statement->getObject()->getTitle()}“{else}an einem Termin, der mittlerweile gelöscht ist,{/if} bezahlt.]]></item>
+		<item name="wcf.jcoins.statement.title.de.wcflabs.jcoins.statement.calendar.fee.owner"><![CDATA[Gebühr erhalten]]></item>
+		<item name="wcf.jcoins.statement.reason.de.wcflabs.jcoins.statement.calendar.fee.owner"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Du hast{else}Sie haben{/if} die Gebühr {if $statement->getObject()->getTitle()}für den Termin „{$statement->getObject()->getTitle()}“ von „{$statement->participant}“ erhalten.{else}für einen Termin, der mittlerweile gelöscht ist, von „{$statement->participant}“ erhalten.{/if}]]></item>
+		<item name="wcf.jcoins.statement.title.de.wcflabs.jcoins.statement.calendar.refee"><![CDATA[Gebühr erstattet]]></item>
+		<item name="wcf.jcoins.statement.reason.de.wcflabs.jcoins.statement.calendar.refee"><![CDATA[Die Gebühr für die Teilnahme {if $statement->getObject()->getTitle()}am Termin „{$statement->getObject()->getTitle()}“{else}an einem Termin, der mittlerweile gelöscht ist,{/if} wurde {if LANGUAGE_USE_INFORMAL_VARIANT}dir{else}Ihnen{/if} erstattet.]]></item>
+		<item name="wcf.jcoins.statement.title.de.wcflabs.jcoins.statement.calendar.refee.owner"><![CDATA[Gebühr erstattet]]></item>
+		<item name="wcf.jcoins.statement.reason.de.wcflabs.jcoins.statement.calendar.refee.owner"><![CDATA[{if LANGUAGE_USE_INFORMAL_VARIANT}Du hast{else}Sie haben{/if} „{$statement->participant}“ die Gebühr {if $statement->getObject()->getTitle()}für den Termin „{$statement->getObject()->getTitle()}“ erstattet.{else}für einen Termin erstattet, der mittlerweile gelöscht ist.{/if}]]></item>
+	</category>
+</language>

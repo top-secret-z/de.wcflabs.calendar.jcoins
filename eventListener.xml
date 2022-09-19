@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/eventListener.xsd">
+	<import>
+		<eventlistener name="jCoinsEventAction">
+			<eventclassname>calendar\data\event\EventAction</eventclassname>
+			<eventname>finalizeAction</eventname>
+			<listenerclassname>calendar\system\event\listener\JCoinsCalenderEventListener</listenerclassname>
+		</eventlistener>
+		<eventlistener name="jCoinsEventAdd">
+			<eventclassname>calendar\form\EventAddForm</eventclassname>
+			<eventname>checkPermissions</eventname>
+			<listenerclassname>calendar\system\event\listener\JCoinsCalenderEventAddFormListener</listenerclassname>
+		</eventlistener>
+		
+		<eventlistener name="jCoinsEventParticipationDialog">
+			<eventclassname>calendar\data\event\date\EventDateAction</eventclassname>
+			<eventname>finalizeAction</eventname>
+			<listenerclassname>calendar\system\event\listener\JCoinsCalenderParticipationListener</listenerclassname>
+		</eventlistener>
+		
+		<eventlistener name="jCoinsEventAddForm">
+			<eventclassname>calendar\form\EventAddForm</eventclassname>
+			<eventname>assignVariables,readFormParameters,save</eventname>
+			<listenerclassname>calendar\system\event\listener\JCoinsCalenderAddFormListener</listenerclassname>
+			<inherit>1</inherit>
+			<environment>user</environment>
+		</eventlistener>
+		<eventlistener name="jCoinsEventEditForm">
+			<eventclassname>calendar\form\EventEditForm</eventclassname>
+			<eventname>readData</eventname>
+			<listenerclassname>calendar\system\event\listener\JCoinsCalenderAddFormListener</listenerclassname>
+			<environment>user</environment>
+		</eventlistener>
+		
+		<eventlistener name="jCoinsEventParticipationAction">
+			<eventclassname>calendar\data\event\date\participation\EventDateParticipationAction</eventclassname>
+			<eventname>finalizeAction</eventname>
+			<listenerclassname>calendar\system\event\listener\JCoinsCalenderParticipationActionListener</listenerclassname>
+		</eventlistener>
+	</import>
+</data>

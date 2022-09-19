@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/templateListener.xsd">
+	<import>
+		<templatelistener name="jCoinsEventParticipationForm">
+			<environment>user</environment>
+			<templatename>eventDateParticipationForm</templatename>
+			<eventname>eventDateParticipation</eventname>
+			<templatecode><![CDATA[{include file='__jCoinsEventParticipationForm' application='calendar'}]]></templatecode>
+		</templatelistener>
+		
+		<templatelistener name="jCoinsEventAddForm">
+			<environment>user</environment>
+			<templatename>eventAdd</templatename>
+			<eventname>participationFields</eventname>
+			<templatecode><![CDATA[{include file='__jCoinsEventAddForm' application='calendar'}]]></templatecode>
+		</templatelistener>
+		
+		<templatelistener name="jCoinsEventShow">
+			<environment>user</environment>
+			<templatename>event</templatename>
+			<eventname>eventData</eventname>
+			<templatecode><![CDATA[{include file='__jCoinsEventShow' application='calendar'}]]></templatecode>
+		</templatelistener>
+	</import>
+</data>
