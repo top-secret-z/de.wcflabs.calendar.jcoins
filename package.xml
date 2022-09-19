@@ -1,48 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package name="de.wcflabs.calendar.jcoins" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/package.xsd">
-	<packageinformation>
-		<packagename><![CDATA[JCoins - Calendar Extension]]></packagename>
-		<packagedescription>Adds Calendar functions to JCoins.</packagedescription>
-		<packagename language="de"><![CDATA[JCoins - Kalender-Erweiterung]]></packagename>
-		<packagedescription language="de">Ergänzt JCoins um Kalender-Funktionen.</packagedescription>
-		<version>5.5.0</version>
-		<date>2022-05-27</date>
-	</packageinformation>
-	
-	<authorinformation>
-		<author>Zaydowicz</author>
-	</authorinformation>
-	
-	<requiredpackages>
-		<requiredpackage minversion="5.3.0">com.woltlab.wcf</requiredpackage>
-		<requiredpackage minversion="5.3.0">com.woltlab.calendar</requiredpackage>
-		<requiredpackage minversion="5.3.0">de.wcflabs.wcf.jcoins</requiredpackage>
-	</requiredpackages>
-	
-	<excludedpackages>
-		<excludedpackage version="5.6.0 Alpha 1">com.woltlab.wcf</excludedpackage>
-	</excludedpackages>
-	
-	<instructions type="install">
-		<instruction type="file" application="calendar">files.tar</instruction>
-		<instruction type="template" application="calendar">templates.tar</instruction>
-		<instruction type="eventListener">eventListener.xml</instruction>
-		<instruction type="templateListener">templateListener.xml</instruction>
-		<instruction type="objectType">objectType.xml</instruction>
-		<instruction type="language">language/*.xml</instruction>
-		<instruction type="userGroupOption">userGroupOption.xml</instruction>
-		<instruction type="sql" run="standalone">update_events.sql</instruction>
-	</instructions>
-	
-	<instructions type="update" fromversion="5.2.*">
-		<instruction type="file" application="calendar">files.tar</instruction>
-	</instructions>
-	
-	<instructions type="update" fromversion="5.3.0">
-		<instruction type="file" application="calendar">files.tar</instruction>
-	</instructions>
-	
-	<instructions type="update" fromversion="5.4.0">
-		<instruction type="file" application="calendar">files.tar</instruction>
-	</instructions>
+<package name="de.softcreatr.calendar.jcoins" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com https://www.woltlab.com/XSD/2019/package.xsd">
+    <packageinformation>
+        <packagename><![CDATA[JCoins - Calendar Extension]]></packagename>
+        <packagedescription>Adds Calendar functions to JCoins.</packagedescription>
+        <packagename language="de"><![CDATA[JCoins - Kalender-Erweiterung]]></packagename>
+        <packagedescription language="de">Ergänzt JCoins um Kalender-Funktionen.</packagedescription>
+        <version>5.5.1</version>
+        <date>2022-09-18</date>
+    </packageinformation>
+
+    <authorinformation>
+        <author><![CDATA[SoftCreatR.dev]]></author>
+        <authorurl><![CDATA[https://softcreatr.dev]]></authorurl>
+    </authorinformation>
+
+    <requiredpackages>
+        <requiredpackage minversion="5.3.0">com.woltlab.wcf</requiredpackage>
+        <requiredpackage minversion="5.3.0">com.woltlab.calendar</requiredpackage>
+        <requiredpackage minversion="5.3.0">de.softcreatr.wcf.jcoins</requiredpackage>
+    </requiredpackages>
+
+    <excludedpackages>
+        <excludedpackage version="5.6.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+        <excludedpackage version="*">de.wcflabs.calendar.jcoins</excludedpackage>
+    </excludedpackages>
+
+    <instructions type="install">
+        <instruction type="file" application="calendar" />
+        <instruction type="template" application="calendar" />
+        <instruction type="eventListener" />
+        <instruction type="templateListener" />
+        <instruction type="objectType" />
+        <instruction type="language" />
+        <instruction type="userGroupOption" />
+        <instruction type="sql" run="standalone">update_events.sql</instruction>
+    </instructions>
+
+    <instructions type="update" fromversion="5.2.*">
+        <instruction type="file" application="calendar" />
+    </instructions>
+
+    <instructions type="update" fromversion="5.3.0">
+        <instruction type="file" application="calendar" />
+    </instructions>
+
+    <instructions type="update" fromversion="5.4.0">
+        <instruction type="file" application="calendar" />
+    </instructions>
+
+    <instructions type="update" fromversion="5.5.0">
+        <instruction type="file" application="calendar" />
+        <instruction type="template" application="calendar" />
+        <instruction type="eventListener" />
+        <instruction type="templateListener" />
+        <instruction type="objectType" />
+        <instruction type="language" />
+        <instruction type="userGroupOption" />
+    </instructions>
 </package>
